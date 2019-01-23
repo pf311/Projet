@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class InscriptionActivity extends AppCompatActivity {
@@ -17,6 +18,14 @@ public class InscriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(InscriptionActivity.this, ConnectActivity.class));
+            }
+        });
+
+        Button intentMenu = findViewById(R.id.signUpBtn);
+        intentMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(InscriptionActivity.this , MenuActivity.class));
             }
         });
     }

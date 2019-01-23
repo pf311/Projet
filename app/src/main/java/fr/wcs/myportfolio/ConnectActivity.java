@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ConnectActivity extends AppCompatActivity {
@@ -19,5 +20,14 @@ public class ConnectActivity extends AppCompatActivity {
                 startActivity(new Intent(ConnectActivity.this, InscriptionActivity.class));
             }
         });
+
+        Button intentMenu = findViewById(R.id.loginBtn);
+        intentMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ConnectActivity.this, MenuActivity.class));
+            }
+        });
     }
+
 }
